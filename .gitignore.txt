@@ -1,0 +1,12 @@
+/target
+/.mvn
+*.log
+*.class
+*.jar
+*.war
+*.iml
+*.swp
+.DS_Store
+/node_modules
+.env
+application.properties

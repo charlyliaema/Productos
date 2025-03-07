@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  springboot-app:
+    build: .
+    container_name: productos
+    environment:
+       - SPRING_DATASOURCE_URL:jdbc:oracle:thin:@host.docker.internal:1521:xe
+       - SPRING_DATASOURCE_USERNAME:System
+       - SPRING_DATASOURCE_PASSWORD:admin
+    ports:
+       - "9001:9001"
