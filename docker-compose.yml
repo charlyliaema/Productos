@@ -1,11 +1,11 @@
 version: '3.8'
 services:
   springboot-app:
-    build: .
+    image: productos  # Nombre de la imagen de tu microservicio Spring Boot
     container_name: productos
     environment:
-       - SPRING_DATASOURCE_URL:jdbc:oracle:thin:@host.docker.internal:1521:xe
-       - SPRING_DATASOURCE_USERNAME:System
-       - SPRING_DATASOURCE_PASSWORD:admin
+      - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@host.docker.internal:1521/XE
+      - SPRING_DATASOURCE_USERNAME=system
+      - SPRING_DATASOURCE_PASSWORD=admin
     ports:
-       - "9001:9001"
+      - "9005:9005"  # Puerto para acceder al microservicio
